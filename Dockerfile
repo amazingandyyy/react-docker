@@ -1,6 +1,6 @@
 FROM node:alpine as builder
 
-WORKDIR '/home/app/webapp'
+WORKDIR '/app'
 COPY package.json .
 COPY . .
 RUN npm install
