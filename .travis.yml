@@ -10,6 +10,7 @@ before_install:
 
 scripts:
   - docker run travis/docker-react:latest npm run test -- --coverage
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
