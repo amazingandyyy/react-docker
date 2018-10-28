@@ -10,3 +10,16 @@ before_install:
 
 scripts:
   - docker run travis/docker-react:latest npm run test -- --coverage
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "react-app"
+  env: "ReactApp-env"
+  bucket_name: "elasticbeanstalk-us-east-1-764075402221"
+  bucket_path: "react-app"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESSS_KEY
+  secret_access_key:
+    secret: "$AWS_SECRET_KEY"
+
