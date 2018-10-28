@@ -19,7 +19,7 @@ deploy:
   bucket_path: "react-app"
   on:
     branch: master
-  access_key_id: $AWS_ACCESSS_KEY
+  access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secret: "$AWS_SECRET_KEY"
 
