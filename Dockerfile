@@ -1,10 +1,6 @@
 FROM node:alpine as builder
 
-WORKDIR '/app'
-COPY Gemfile .
-COPY Gemfile.lock .
-COPY package.json .
-COPY . .
+COPY . /app
 RUN npm install
 RUN npm run build
 
